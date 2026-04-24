@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "about": "About",
+    "product": "The Sausage",
+    "process": "How It's Made",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Sai Oua",
+    "subheadline": "The Jewel of Northern Cuisine",
+    "tagline": "An ancient artisan sausage crafted with fragrant herbs, slow fire, and generations of tradition.",
+    "cta": "Discover the Story"
+  },
+  "maker": {
+    "heading": "Meet the Makers",
+    "body": "Our story is coming soon. We are a family of artisans devoted to preserving the authentic flavors and traditions behind every link of sai oua."
+  },
+  "product": {
+    "heading": "What is Sai Oua?",
+    "history_heading": "A Heritage of Flavor",
+    "history": "Sai oua — also known as Northern Thai sausage or Lao sausage — is a celebrated staple of Lanna and Lao cuisine with roots stretching back centuries. Born in the highlands of northern Thailand and Laos, it carries the warmth of ancient spice routes and the care of village traditions passed from hand to hand.",
+    "where_heading": "How It's Enjoyed",
+    "where": "Grilled over charcoal until fragrant and slightly charred, sai oua is sliced into generous rounds and served alongside sticky rice, fresh vegetables, and fiery chili dipping sauces. It is a fixture of morning markets, roadside stalls, and family feasts across the region.",
+    "culture_heading": "A Symbol of Celebration",
+    "culture": "Sai oua holds a place of honor at Songkran, Lao New Year, temple fairs, and family milestones. To offer sai oua is to offer warmth and welcome — a tradition as old as the sausage itself."
+  },
+  "process": {
+    "heading": "Crafted with Care",
+    "ingredients_heading": "The Ingredients",
+    "ingredients": "Ground pork forms the base, brought to life with a hand-pounded paste of lemongrass, galangal, kaffir lime leaves, shallots, garlic, dried chilies, turmeric, and fish sauce. No shortcuts, no substitutes — just the same aromatics that have defined this sausage for generations.",
+    "process_heading": "The Process",
+    "process_body": "The aromatics are pounded by hand in a stone mortar until fragrant and unified. Combined with the pork and seasoned with fish sauce, the mixture is packed tightly into natural casings. The sausages rest, then hang briefly to air-dry before meeting the grill — charcoal only, slow and patient — until the casing blisters and the inside runs rich and juicy."
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "body": "Have a question about sai oua, our producers, or anything on this site? We would love to hear from you.",
+    "link_text": "Send us an email"
+  },
+  "footer": {
+    "copyright": "© 2026 Sai Oua. All rights reserved."
+  }
+}
