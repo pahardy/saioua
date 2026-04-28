@@ -38,5 +38,23 @@
   },
   "footer": {
     "copyright": "© 2026 Sai Oua. All rights reserved."
+  },
+  "order": {
+    "button": "Order Now",
+    "modal_title": "Place Your Order",
+    "quantity_label": "Quantity",
+    "name_label": "Full Name",
+    "address_label": "Street Address",
+    "city_label": "City",
+    "province_label": "Province / State",
+    "postal_label": "Postal Code",
+    "country_label": "Country",
+    "email_label": "Email Address",
+    "phone_label": "Phone Number",
+    "submit": "Place Order",
+    "submitting": "Placing Order...",
+    "success_title": "Order Received",
+    "success_body": "Thank you! Your order number is {orderNumber}. A confirmation has been sent to {email}.",
+    "error_generic": "Something went wrong. Please try again."
   }
 }

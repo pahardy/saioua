@@ -25,13 +25,14 @@ function resolve(obj: Record<string, unknown>, path: string): string {
   return typeof val === 'string' ? val : path
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLang] = useState<Language>('en')
+export function LanguageProvider({ children, initialLang }: { children: ReactNode; initialLang?: Language }) {
+  const [language, setLang] = useState<Language>(initialLang ?? 'en')
 
   useEffect(() => {
+    if (initialLang) return
     const stored = localStorage.getItem('language') as Language | null
     if (stored && stored in messages) setLang(stored)
-  }, [])
+  }, [initialLang])
 
   const setLanguage = (lang: Language) => {
     setLang(lang)
