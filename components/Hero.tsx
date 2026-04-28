@@ -1,10 +1,14 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import { useLanguage } from './LanguageContext'
+import OrderButton from './OrderButton'
+import OrderModal from './OrderModal'
 
 export default function Hero() {
   const { t } = useLanguage()
+  const [orderOpen, setOrderOpen] = useState(false)
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -43,13 +47,20 @@ export default function Hero() {
         <p className="text-stone-300 text-lg md:text-xl leading-relaxed mb-12 max-w-xl mx-auto">
           {t('hero.tagline')}
         </p>
-        <a
-          href="#about"
-          className="inline-block px-8 py-4 bg-[#C96A1E] text-white text-sm uppercase tracking-widest hover:bg-[#E07A2E] transition-colors duration-300 rounded-sm"
-        >
-          {t('hero.cta')}
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="#about"
+            className="inline-block px-8 py-4 bg-[#C96A1E] text-white text-sm uppercase tracking-widest hover:bg-[#E07A2E] transition-colors duration-300 rounded-sm"
+          >
+            {t('hero.cta')}
+          </a>
+          <OrderButton
+            onOpen={() => setOrderOpen(true)}
+            className="inline-block px-8 py-4 border border-[#E8C27A] text-[#E8C27A] text-sm uppercase tracking-widest hover:bg-[#E8C27A] hover:text-[#1A0A05] transition-colors duration-300 rounded-sm"
+          />
+        </div>
       </div>
+      <OrderModal isOpen={orderOpen} onClose={() => setOrderOpen(false)} />
 
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-stone-400">
