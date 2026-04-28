@@ -1,6 +1,5 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
 const OWNER_EMAIL = process.env.ORDER_NOTIFICATION_EMAIL ?? 'hardy_patrick@yahoo.ca'
 
 interface OrderPayload {
@@ -48,6 +47,8 @@ export async function POST(request: Request) {
   const order = body as OrderPayload
   const orderNumber = generateOrderNumber()
   const summary = orderSummary(order)
+
+  const resend = new Resend(process.env.RESEND_API_KEY)
 
   await resend.emails.send({
     from: 'Sai Oua <orders@saioua.com>',
