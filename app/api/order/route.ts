@@ -65,24 +65,26 @@ export async function POST(request: Request) {
 
   const resend = new Resend(process.env.RESEND_API_KEY)
 
+  const FROM = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev'
+
   const { error: customerError } = await resend.emails.send({
-    from: 'Sai Oua <orders@saioua.com>',
+    from: `Sai Oua <${FROM}>`,
     to: order.email,
     subject: `Order Confirmation — ${orderNumber}`,
     text: `Thank you for your order!\n\nOrder Number: ${orderNumber}\n\n${summary}\n\nWe will be in touch soon.`,
   })
   if (customerError) {
-    return Response.json({ error: 'Failed to send confirmation email' }, { status: 500 })
+    return Response.json({ error: 'Failed to send confirmation email', detail: customerError }, { status: 500 })
   }
 
   const { error: ownerError } = await resend.emails.send({
-    from: 'Sai Oua <orders@saioua.com>',
+    from: `Sai Oua <${FROM}>`,
     to: OWNER_EMAIL,
     subject: `New Order — ${orderNumber}`,
     text: `A new order has been placed.\n\nOrder Number: ${orderNumber}\n\n${summary}`,
   })
   if (ownerError) {
-    return Response.json({ error: 'Failed to send owner notification' }, { status: 500 })
+    return Response.json({ error: 'Failed to send owner notification', detail: ownerError }, { status: 500 })
   }
 
   return Response.json({ success: true, orderNumber })
